@@ -1,0 +1,155 @@
+.footer {
+  background-color: #fff;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 300px;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 160, 0, 0.5), rgba(211, 47, 47, 0.5));
+  opacity: 0.1;
+  animation: animateBackground 5s linear infinite;
+  z-index: 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  position: relative;
+  color: #d32f2f;
+}
+
+.footer-section h3::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #d32f2f;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #d32f2f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffa000;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  width: 100%;
+  max-width: 1000px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    padding: 10px 0;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5em;
+  }
+
+  .footer-section p,
+  .footer-section ul {
+    font-size: 1em;
+  }
+}

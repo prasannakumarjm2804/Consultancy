@@ -1,0 +1,83 @@
+.reports-container {
+    padding: 40px 60px;
+    background: #f1f4f9;
+    min-height: 100vh;
+  }
+  
+  .reports-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  
+  .report-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: white;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.07);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .report-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .report-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .report-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .report-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .report-card button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .report-card button:hover {
+    background-color: #1565c0;
+  }
+  
+  /* Color Themes */
+  .report-blue {
+    border-left: 6px solid #42a5f5;
+  }
+  .report-green {
+    border-left: 6px solid #66bb6a;
+  }
+  .report-orange {
+    border-left: 6px solid #ffa726;
+  }
+  .report-yellow {
+    border-left: 6px solid #fdd835;
+  }
+  .report-purple {
+    border-left: 6px solid #ab47bc;
+  }
+  
