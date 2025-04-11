@@ -1,0 +1,28 @@
+.feedback-report-container {
+    padding: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .filters select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .charts-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .chart-box {
+    width: 100%;
+    max-width: 500px;
+  }
+  

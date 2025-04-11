@@ -1,0 +1,117 @@
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; /* Default to small circular icon */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d32f2f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+  }
+  
+  .chatbot.open {
+    width: 400px; /* Expand to full chat window */
+    height: 500px;
+    border-radius: 10px;
+  }
+  
+  .chatbot-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chatbot-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .chatbot.open .chatbot-header {
+    width: 100%;
+    height: 50px;
+    background-color: #d32f2f;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+  }
+  
+  .chatbot-body {
+    display: none;
+  }
+  
+  .chatbot.open .chatbot-body {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 50px);
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .chatbot-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9em;
+  }
+  
+  .message.user {
+    background-color: #f0f0f0;
+    align-self: flex-end;
+  }
+  
+  .message.bot {
+    background-color: #d32f2f;
+    color: #fff;
+    align-self: flex-start;
+  }
+  
+  .chatbot-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+  }
+  
+  .chatbot-input button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .chatbot-input button:hover {
+    background-color: #b71c1c;
+  }
+  
+  .message.typing {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px; /* Ensure it's in the left corner */
+  }
+  
+  .typing-indicator {
+    width: 20px; /* Reduce size */
+    height: 20px;
+    background: none; /* Remove any background */
+  }
+  

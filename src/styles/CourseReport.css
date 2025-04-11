@@ -1,0 +1,141 @@
+.reports-container {
+  padding: 20px;
+  max-width: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.reports-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.report-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.report-options label {
+  font-size: 1.2em;
+}
+
+.report-options input {
+  margin-right: 10px;
+}
+
+.course-selection {
+  margin-bottom: 20px;
+}
+
+.course-selection label {
+  font-size: 1.2em;
+}
+
+.course-selection select {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 1em;
+}
+
+button {
+  background-color: #d32f2f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #b71c1c;
+}
+
+.report-table {
+  margin-top: 20px;
+}
+
+.report-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.report-table th,
+.report-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.report-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.report-table button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.report-table button:hover {
+  background-color: #0056b3;
+}
+
+.date-selection,
+.month-selection,
+.year-selection {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.date-selection label,
+.month-selection label,
+.year-selection label {
+  font-size: 1.2em;
+}
+
+.no-data-message {
+  color: #d32f2f;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.chart-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-selection {
+    text-align: left;
+  }
+
+  .report-table table {
+    font-size: 0.9em;
+  }
+}

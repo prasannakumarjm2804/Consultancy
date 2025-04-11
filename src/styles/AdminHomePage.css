@@ -1,0 +1,235 @@
+:root {
+  --primary: #4e73df;
+  --secondary: #36b9cc;
+  --success: #1cc88a;
+  --danger: #e74a3b;
+  --warning: #f6c23e;
+  --gray-dark: #343a40;
+  --gray-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+.admin-home-container {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.admin-home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--gray-dark);
+}
+
+.admin-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-actions button {
+  background-color: var(--danger);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.admin-actions button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Layout */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #495057;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--gray-light);
+  overflow-y: auto;
+}
+
+.dashboard-content h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Cards */
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.action-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-left: 6px solid transparent;
+}
+
+.action-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.action-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.action-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Unique Colors */
+.action-card:nth-child(1) {
+  border-left-color: var(--primary);
+}
+
+.action-card:nth-child(2) {
+  border-left-color: var(--warning);
+}
+
+.action-card:nth-child(3) {
+  border-left-color: var(--success);
+}
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 60%;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+}
+
+.sidebar-options {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1em;
+}
+
+.sidebar-options li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-options li:hover {
+  background-color: #495057;
+}
+/* Mobile Header */
+.mobile-header {
+  display: none;
+  background-color: var(--gray-dark);
+  color: white;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Sidebar default styles are already defined; just add for mobile */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: var(--gray-dark);
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .dashboard-content {
+    padding: 1rem;
+  }
+}
